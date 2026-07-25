@@ -11,7 +11,7 @@ Console.WriteLine(fruit);
 
 namespace FastEnumUtility.Sandbox
 {
-    [Obsolete(DiagnosticId = "FE0003")]
+    //[Obsolete(DiagnosticId = "FE0003")]
     public enum Fruits
     {
         Apple = 1,
