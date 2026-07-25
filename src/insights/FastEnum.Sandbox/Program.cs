@@ -11,6 +11,7 @@ Console.WriteLine(fruit);
 
 namespace FastEnumUtility.Sandbox
 {
+    [Obsolete(DiagnosticId = "FE0003")]
     public enum Fruits
     {
         Apple = 1,
@@ -18,11 +19,17 @@ namespace FastEnumUtility.Sandbox
 #pragma warning disable CA1041
         [Obsolete]
         Banana,
+
+        [Obsolete(DiagnosticId = "FE0001")]
+        Peach,
+
+        [Obsolete(DiagnosticId = "FE0002")]
+        Lemon,
 #pragma warning restore CA1041
     }
 
 
-    [FastEnum<Fruits>]
+    [global::FastEnumUtility.FastEnum<Fruits>]
     public partial class FruitsBooster
     { }
 
