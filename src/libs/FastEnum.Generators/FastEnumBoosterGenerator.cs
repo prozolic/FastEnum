@@ -289,9 +289,6 @@ public sealed class FastEnumBoosterGenerator : IIncrementalGenerator
         sb.AppendLine("""
                 #endregion
             }
-
-            #pragma warning restore CS0618
-            #pragma warning restore CS0612
             """);
 
         //--- ok
