@@ -220,7 +220,6 @@ public sealed class FastEnumBoosterGenerator : IIncrementalGenerator
                             ? caseInsensitive(text, out result)
                             : caseSensitive(text, out result);
 
-
                         #region Local Functions
                         [MethodImpl(MethodImplOptions.AggressiveInlining)]
                         static bool caseSensitive(ReadOnlySpan<char> text, out {{param.EnumType.TypeName}} result)
@@ -243,7 +242,6 @@ public sealed class FastEnumBoosterGenerator : IIncrementalGenerator
                                     return false;
                             }
                         }
-
 
                         [MethodImpl(MethodImplOptions.AggressiveInlining)]
                         static bool caseInsensitive(ReadOnlySpan<char> text, out {{param.EnumType.TypeName}} result)
