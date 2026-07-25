@@ -26,5 +26,10 @@ namespace FastEnumUtility.Sandbox
     [global::FastEnumUtility.FastEnum<HttpStatusCode>]
     public partial class HttpStatusCodeBooster
     { }
+
+
+    [global::FastEnumUtility.FastEnum<LoaderOptimization>]
+    public partial class LoaderOptimizationBooster
+    { }
 }
 
