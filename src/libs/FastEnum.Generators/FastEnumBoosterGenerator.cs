@@ -139,7 +139,7 @@ public sealed class FastEnumBoosterGenerator : IIncrementalGenerator
                 .SelectMany(static x => x.NamedArguments)
                 .Where(static x => x.Key is "DiagnosticId")
                 .Select(static x => x.Value)
-                .Where(static x => x.Type?.ToString() is "string")
+                .Where(static x => x.Type?.SpecialType is SpecialType.System_String)
                 .Select(static x => (string?)x.Value)
                 .Select(static x => x?.Trim())
                 .Where(static x => !string.IsNullOrWhiteSpace(x))
