@@ -120,6 +120,10 @@ public sealed class FastEnumBoosterGenerator : IIncrementalGenerator
             #nullable enable
             #pragma warning disable CS0612
             #pragma warning disable CS0618
+            """);
+
+        //--- using directives
+        sb.AppendLine("""
 
             using System;
             using System.Globalization;
