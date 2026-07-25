@@ -14,13 +14,17 @@ namespace FastEnumUtility.Sandbox
     public enum Fruits
     {
         Apple = 1,
+
+#pragma warning disable CA1041
+        [Obsolete]
         Banana,
+#pragma warning restore CA1041
     }
 
 
-    //[FastEnum<Fruits>]
-    //public partial class FruitsBooster
-    //{ }
+    [FastEnum<Fruits>]
+    public partial class FruitsBooster
+    { }
 
 
     [global::FastEnumUtility.FastEnum<HttpStatusCode>]
