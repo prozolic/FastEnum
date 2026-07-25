@@ -135,7 +135,12 @@ public sealed class FastEnumBoosterGenerator : IIncrementalGenerator
                 = types
                 .Concat(fields)
                 .SelectMany(static x => x.GetAttributes())
-                .Where(static x => x.AttributeClass?.ToString() is "System.ObsoleteAttribute")
+                .Where(static x =>
+                {
+                    var @class = x.AttributeClass;
+                    return (@class?.ContainingNamespace.MetadataName == typeof(ObsoleteAttribute).Namespace)
+                        && (@class?.MetadataName is nameof(ObsoleteAttribute));
+                })
                 .SelectMany(static x => x.NamedArguments)
                 .Where(static x => x.Key is "DiagnosticId")
                 .Select(static x => x.Value)
