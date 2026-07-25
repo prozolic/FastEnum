@@ -3,6 +3,7 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <RootNamespace>FastEnumUtility.Sandbox</RootNamespace>
+        <WarningsAsErrors>CS0612;CS0618</WarningsAsErrors>
     </PropertyGroup>
 
     <ItemGroup>
